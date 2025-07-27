@@ -180,6 +180,7 @@
 </head>
 <body>
 
+
     <!-- SZEKCIÓ 1: FEJLÉC (HERO SECTION) -->
     <section id="hero">
         <div class="container">
@@ -246,24 +247,197 @@
         </div>
     </section>
     
-    <!-- SZEKCIÓ 4: ÁRAZÁS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millioner Strategy - The Ultimate Trading Indicator for TradingView</title>
+    <style>
+        :root {
+            --primary-color: #00aaff;
+            --background-color: #0d1117;
+            --card-color: #161b22;
+            --text-color: #c9d1d9;
+            --heading-color: #ffffff;
+            --green-color: #28a745;
+            --red-color: #dc3545;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: var(--heading-color);
+            margin-bottom: 20px;
+        }
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+        }
+        #hero img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 50px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .pricing-card {
+            background-color: var(--card-color);
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card.highlight {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+        .price .original-price {
+            text-decoration: line-through;
+            font-size: 1.5rem;
+            opacity: 0.6;
+            margin-left: 10px;
+        }
+        .pricing-card .term {
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        .pricing-card .promo-text {
+            color: var(--green-color);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+        .pricing-card ul li {
+            margin-bottom: 10px;
+        }
+        .pricing-card ul li::before {
+            content: '✓';
+            color: var(--green-color);
+            margin-right: 10px;
+        }
+        @media (max-width: 992px) {
+            .pricing-card.highlight {
+                transform: scale(1);
+            }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ... (A korábbi Hero, Proof, Features szekciók változatlanok) ... -->
+    
+    <!-- SZEKCIÓ 4: ÁRAZÁS (ÚJ, HÁROMOSZLOPOS VERZIÓ) -->
     <section id="pricing">
         <div class="container">
             <h2>Get Your Lifetime License Today</h2>
-            <div class="pricing-card">
-                <h3>Millioner Strategy PRO Pack</h3>
-                <ul>
-                    <li>Lifetime Access to v6.5 (Classic EMA Engine)</li>
-                    <li>Lifetime Access to v7.5 (Adaptive KAMA Engine)</li>
-                    <li>Full Access to All Features & Filters</li>
-                    <li>Free Lifetime Updates to Both Indicators</li>
-                    <li>Full Customer Support</li>
-                </ul>
-                <!-- IDE ÍRD BE A VÉGLEGES ÁRAT -->
-                <div class="price">$1200</div>
-                <p>One-Time Payment. No Monthly Fees.</p>
-                <!-- IDE ILLESZD BE A FIZETÉSI LINKEDET (PL. GUMROAD) -->
-                <a href="[PLACEHOLDER: A TE FIZETÉSI LINKED HELYE]" class="cta-button">Get Instant Access Now</a>
+            <p>Choose the plan that fits your trading journey. All plans include full access to both indicator versions and all future updates.</p>
+            
+            <div class="pricing-grid">
+                
+                <!-- 1. Csomag: Havi -->
+                <div class="pricing-card">
+                    <h3>Monthly</h3>
+                    <div class="price">$70 <span class="original-price">$140</span></div>
+                    <div class="term">per month</div>
+                    <div class="promo-text">For the first 300 members!</div>
+                    <ul>
+                        <li>Full access to v6.5 (Classic)</li>
+                        <li>Full access to v7.5 (Adaptive)</li>
+			<li>Quantastra Scalper v1.7 Pro</li>
+                        <li>All future updates</li>
+                        <li>Full Customer Support</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A HAVI CSOMAG FIZETÉSI LINKJÉT -->
+                    <a href="[PLACEHOLDER: HAVI CSOMAG LINKJE]" class="cta-button">Subscribe Now</a>
+                </div>
+
+                <!-- 2. Csomag: 3 Hónapos (Kiemelt) -->
+                <div class="pricing-card highlight">
+                    <h3>3 Months</h3>
+                    <div class="price">$200 <span class="original-price">$300</span></div>
+                    <div class="term">billed every 3 months</div>
+                    <div class="promo-text">Best Value! For the first 300 members!</div>
+                    <ul>
+                        <li>Full access to v6.5 (Classic)</li>
+                        <li>Full access to v7.5 (Adaptive)</li>
+			<li>Quantastra Scalper v1.7 Pro</li>
+                        <li>All future updates</li>
+                        <li>Full Customer Support</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A 3 HÓNAPOS CSOMAG FIZETÉSI LINKJÉT -->
+                    <a href="[PLACEHOLDER: 3 HÓNAPOS CSOMAG LINKJE]" class="cta-button">Get Best Value</a>
+                </div>
+
+                <!-- 3. Csomag: Lifetime -->
+                <div class="pricing-card">
+                    <h3>Lifetime</h3>
+                    <div class="price">$888 <span class="original-price">$1200</span></div>
+                    <div class="term">one-time payment</div>
+                    <div class="promo-text">For the first 300 members!</div>
+                    <ul>
+                        <li>Full access to v6.5 (Classic)</li>
+                        <li>Full access to v7.5 (Adaptive)</li>
+			<li>Quantastra Scalper v1.7 Pro</li>
+                        <li>All future updates</li>
+                        <li>Full Customer Support</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A LIFETIME CSOMAG FIZETÉSI LINKJÉT -->
+                    <a href="[PLACEHOLDER: LIFETIME CSOMAG LINKJE]" class="cta-button">Get Lifetime Access</a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -296,8 +470,4 @@
     </footer>
 
 </body>
-</html>```
-
-Holnap, ha kipihented magad, csak annyi a dolgod, hogy ezt a kódot elmented, megnyitod, és megnézed, mit alkottunk.
-
-Jó pihenést
+</html>
