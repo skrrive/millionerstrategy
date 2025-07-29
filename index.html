@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millioner Strategy - Your Complete Trading Arsenal</title>
+    <style>
+        /* --- ÁLTALÁNOS STÍLUSOK --- */
+        :root {
+            --primary-color: #00aaff; /* Élénk kék a gombokhoz és kiemelésekhez */
+            --background-color: #0d1117; /* Sötét háttér */
+            --card-color: #161b22; /* Kártyák háttérszíne */
+            --text-color: #c9d1d9; /* Általános szövegszín */
+            --heading-color: #ffffff; /* Címsorok színe */
+            --green-color: #28a745;
+            --red-color: #dc3545;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        h1 { font-size: 3.2rem; }
+        h2 { font-size: 2.5rem; }
+        p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+        }
+
+        /* --- FEJLÉC (HERO SECTION) --- */
+        #hero {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .nav-links {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        #hero img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 50px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- BIZONYÍTÉK SÁV --- */
+        #proof-bar {
+            background-color: var(--card-color);
+            padding: 25px 0;
+        }
+        .proof-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .proof-item {
+            text-align: center;
+        }
+        .proof-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .proof-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .win-rate {
+            color: var(--green-color);
+            font-weight: bold;
+        }
+
+        /* --- TERMÉKEK --- */
+        .two-column-section {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
+            text-align: left;
+            margin-top: 60px;
+        }
+        .two-column-section img {
+            max-width: 50%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .text-content {
+            flex: 1;
+        }
+         /* Fordított sorrend mobil nézetben */
+        @media (max-width: 768px) {
+            .two-column-section {
+                flex-direction: column;
+            }
+            .two-column-section.reverse-on-mobile {
+                flex-direction: column-reverse;
+            }
+            .two-column-section img {
+                max-width: 100%;
+            }
+        }
+        
+        /* --- GALÉRIA --- */
+        #gallery {
+            background-color: var(--card-color);
+        }
+
+        /* --- REFERRAL SZEKCIÓ --- */
+        .referral-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .referral-card {
+            background-color: var(--background-color);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .referral-card img {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* --- ÁRAZÁS --- */
+        #pricing {
+            background-color: var(--card-color);
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .pricing-card {
+            background-color: var(--background-color);
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card.highlight {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+        .price .original-price {
+            text-decoration: line-through;
+            font-size: 1.5rem;
+            opacity: 0.6;
+            margin-left: 10px;
+        }
+        .pricing-card .term {
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        .pricing-card .promo-text {
+            color: var(--green-color);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+        .pricing-card ul li {
+            margin-bottom: 10px;
+        }
+        .pricing-card ul li::before {
+            content: '✓';
+            color: var(--green-color);
+            margin-right: 10px;
+        }
+
+        /* --- GYIK (FAQ) --- */
+        .faq-item {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 1.3rem;
+        }
+
+        /* --- ÚJ LÁBLÉC STÍLUSOK --- */
+        footer {
+            background-color: var(--card-color);
+            padding: 60px 0 20px 0;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .footer-column h4 {
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-column p, .footer-column a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: color 0.2s ease;
+        }
+        .footer-column a:hover {
+            color: var(--primary-color);
+        }
+        .footer-bottom {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .footer-bottom p {
+            max-width: 100%;
+            font-size: 0.8rem;
+            margin: 5px auto;
+        }
+        
+        @media (max-width: 992px) { .pricing-card.highlight { transform: scale(1); } }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } section { padding: 60px 0; }
+            .two-column-section { flex-direction: column; }
+            .two-column-section.reverse-on-mobile { flex-direction: column-reverse; }
+            .two-column-section img { max-width: 100%; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- SZEKCIÓ 1: FEJLÉC (HERO SECTION) -->
+    <section id="hero">
+        <div class="container">
+            <!-- OPCIONÁLIS: IDE ILLESZD BE A LOGÓD LINKJÉT -->
+            <!-- <img src="[PLACEHOLDER: LOGO_LINK]" alt="Millioner Strategy Logo" style="max-width: 150px; margin-bottom: 30px;"> -->
+            
+            <h1>The Only Complete Trading System You Will Ever Need.</h1>
+            <p>Stop chasing holy grails. Our PRO Pack gives you **three specialized, data-proven indicators** for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
+            
+            <div class="nav-links">
+                <a href="#products">The Tools</a>
+                <a href="#gallery">Results</a>
+                <a href="#exchanges">Partners</a>
+                <a href="#pricing">Get Access</a>
+            </div>
+
+            <!-- IDE ILLESZD BE A LEGJOBB, LEGLÁTVÁNYOSABB ÖSSZEFOGLALÓ KÉPERNYŐFOTÓDAT! -->
+            <img src="https://i.imgur.com/example.png" alt="Millioner Strategy in action on a chart">
+        </div>
+    </section>
+
+    <!-- SZEKCIÓ 2: BIZONYÍTÉK SÁV -->
+    <section id="proof-bar">
+        <div class="container proof-grid">
+            <div class="proof-item">
+                <h3><span class="win-rate">96.15%</span> WR</h3>
+                <p>on Solana (1D)</p>
+            </div>
+            <div class="proof-item">
+                <h3><span class="win-rate">84.21%</span> WR</h3>
+                <p>on Bitcoin (4H)</p>
+            </div>
+            <div class="proof-item">
+                <h3><span class="win-rate">80.27%</span> WR</h3>
+                <p>on Cardano (1H)</p>
+            </div>
+             <div class="proof-item">
+                <h3><span class="win-rate">80.77%</span> WR</h3>
+                <p>on Gold (1D)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SZEKCIÓ 3: A TERMÉKEK BEMUTATÁSA -->
+    <section id="products">
+        <div class="container">
+            <h2>Your Complete Trading Arsenal</h2>
+            <p>You don't get one indicator. You get three specialized weapons, each designed for a specific trading style.</p>
+
+            <div class="two-column-section" style="margin-top: 60px;">
+                <!-- IDE ILLESZD BE A MILLIONER STRATEGY LEGJOBB KÉPÉT -->
+                <img src="https://i.imgur.com/example.png" alt="Millioner Strategy Indicator">
+                <div class="text-content">
+                    <h3>Millioner Strategy v7.6 PRO</h3>
+                    <h4>(Adaptive Engine)</h4>
+                    <p>Our flagship indicator for swing and day trading. The AI-like Adaptive (KAMA) Engine automatically adjusts to market volatility, delivering an incredible 80-96% win rate on higher timeframes. **This is your tool for relaxed, high-probability trend trading.**</p>
+                </div>
+            </div>
+
+            <div class="two-column-section reverse-on-mobile" style="margin-top: 60px;">
+                <div class="text-content">
+                    <h3>Quantum Scalper v1.7 PRO</h3>
+                    <p>Your weapon for high-frequency scalping on lower timeframes (M1-M15). The multi-stage confirmation engine filters market noise to deliver precise pullback entries. **This is your tool for capturing quick, consistent profits throughout the day.** Best used on the 5-minute chart for optimal performance.</p>
+                </div>
+                <!-- IDE ILLESZD BE A QUANTUM SCALPER LEGJOBB KÉPÉT -->
+                <img src="https://i.imgur.com/example.png" alt="Quantum Scalper Indicator">
+            </div>
+
+             <div class="two-column-section" style="margin-top: 60px;">
+                <!-- IDE ILLESZD BE A SUPPORT/RESISTANCE ZONES LEGJOBB KÉPÉT -->
+                <img src="https://i.imgur.com/example.png" alt="Support & Resistance Zones Indicator">
+                <div class="text-content">
+                    <h3>Support & Resistance Zones v1.3</h3>
+                    <p>The foundation of any professional analysis. This tool automatically identifies and plots the most critical support and resistance zones on your chart. It validates the signals from our other indicators, giving you an extra layer of confidence. **This is your map of the market.**</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SZEKCIÓ 4: KÉPGALÉRIA -->
+    <section id="gallery" style="background-color: var(--card-color);">
+        <div class="container">
+            <h2>Results Gallery & Case Studies</h2>
+            <p>We don't make empty claims. We show you the data. Explore our gallery of real, unedited screenshots from different markets and timeframes.</p>
+            <!-- IDE ILLESZD BE A LINKET A KÜLÖN GALÉRIA OLDALADHOZ (PL. EGY GOOGLE DRIVE VAGY IMGUR ALBUM) -->
+            <a href="gallery.html" class="cta-button" target="_blank" style="max-width: 400px;">View the Full Gallery</a>
+        </div>
+    </section>
+
+    <!-- SZEKCIÓ 5: PARTNER TŐZSDÉK -->
+    <section id="exchanges">
+        <div class="container">
+            <h2>Start with a Bonus on Our Partner Exchanges</h2>
+            <p>If you are new to trading or want to open a new account, use our official referral links to get the best deposit bonuses and trading fee discounts.</p>
+            <div class="referral-grid">
+                <div class="referral-card">
+                    <img src="https://i.imgur.com/L6A8T6j.png" alt="Bybit Logo">
+                    <h3>Bybit Exchange</h3>
+                    <p>Up to $30,000 deposit bonus for new users.</p>
+                    <!-- IDE ILLESZD BE A BYBIT REFERRAL LINKEDET -->
+                    <a href="[PLACEHOLDER: A TE BYBIT REFERRAL LINKED]" class="cta-button" style="margin-top: 20px;" target="_blank">Sign Up on Bybit</a>
+                </div>
+                <div class="referral-card">
+                    <img src="https://i.imgur.com/53sX7n2.png" alt="MEXC Logo">
+                    <h3>MEXC Exchange</h3>
+                    <p>10% lifetime discount on all trading fees.</p>
+                    <!-- IDE ILLESZD BE A MEXC REFERRAL LINKEDET -->
+                    <a href="[PLACEHOLDER: A TE MEXC REFERRAL LINKED]" class="cta-button" style="margin-top: 20px;" target="_blank">Sign Up on MEXC</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SZEKCIÓ 6: ÁRAZÁS -->
+    <section id="pricing" style="background-color: var(--card-color);">
+        <div class="container">
+            <h2>Get Your Complete Trading Arsenal</h2>
+            <p>Choose the plan that fits your trading journey. All plans include full access to all three indicator versions and all future updates.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Monthly</h3>
+                    <div class="price">$70 <span class="original-price">$140</span></div>
+                    <div class="term">per month</div>
+                    <div class="promo-text">For the first 300 members!</div>
+                    <ul>
+                        <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Millioner Strategy v6.5 (Classic)</li>
+                        <li>Quantum Scalper v1.7 PRO</li>
+                        <li>S&R Zones v1.3</li>
+                        <li>All Future Updates</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A HAVI CSOMAG WHOP LINKJÉT -->
+                    <a href="[PLACEHOLDER: HAVI CSOMAG WHOP LINKJE]" class="cta-button">Subscribe Now</a>
+                </div>
+
+		<div class="pricing-card highlight">
+                    <h3>Lifetime</h3>
+                    <div class="price">$485 <span class="original-price">$890</span></div>
+                    <div class="term">one-time payment</div>
+                    <div class="promo-text">For the first 300 members!</div>
+                    <ul>
+                        <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Millioner Strategy v6.5 (Classic)</li>
+                        <li>Quantum Scalper v1.7 PRO</li>
+                        <li>Support & Resistance Zones v1.3</li>
+                        <li>All Future Updates</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A LIFETIME CSOMAG WHOP LINKJÉT -->
+                    <a href="[PLACEHOLDER: LIFETIME CSOMAG WHOP LINKJE]" class="cta-button">Get Lifetime Access</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>3 Months</h3>
+                    <div class="price">$175 <span class="original-price">$300</span></div>
+                    <div class="term">billed every 3 months</div>
+                    <div class="promo-text">Best Value! For the first 300 members!</div>
+                    <ul>
+                        <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Millioner Strategy v6.5 (Classic)</li>
+                        <li>Quantum Scalper v1.7 PRO</li>
+                        <li>S&R Zones v1.3</li>
+                        <li>All Future Updates</li>
+                    </ul>
+                    <!-- IDE ILLESZD BE A 3 HÓNAPOS CSOMAG WHOP LINKJÉT -->
+                    <a href="[PLACEHOLDER: 3 HÓNAPOS CSOMAG WHOP LINKJE]" class="cta-button">Get Best Value</a>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SZEKCIÓ 7: GYIK (FAQ) -->
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What do I get when I purchase?</h3>
+                <p>You get instant access to our complete PRO Pack, which includes three powerful, distinct indicators for TradingView: the Millioner Strategy (with both Adaptive and Classic engines), the Quantum Scalper, and the Support & Resistance Zones indicator. You also get all future updates for free.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What markets does this work on?</h3>
+                <p>Our indicators are designed to work on any market available on TradingView, including Crypto, Forex, Stocks, and Indices. Our backtests have shown exceptional performance across all major asset classes.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is it easy to install?</h3>
+                <p>Yes! After purchase through our secure Whop portal, you will provide your TradingView username, and we will grant you access instantly. You'll be up and running in less than 2 minutes, even if you're new to TradingView.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÁBLÉC -->
+    <footer>
+             <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Millioner Strategy</h4>
+                    <!-- IDE ÍRHATSZ EGY RÖVID, ÖSSZEFOGLALÓ MONDATOT A MÁRKÁDRÓL -->
+                    <p>The gold standard in algorithmic trading tools, designed for traders who demand a statistical edge.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="#hero">Home</a>
+                    <a href="#products">The Indicators</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="gallery.html" target="_blank">Results Gallery</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Useful Links</h4>
+                    <!-- IDE A TE KONTAKT OLDALAD LINKJE KELL -->
+                    <a href="contact.html" target="_blank">Contact Us</a> 
+                    <a href="#faq">FAQs</a>
+                    <!-- IDE A WHOP FIÓK KEZELÉSI LINKJE KELL, AMIT A WHOP AD -->
+                    <a href="https://whop.com/hub/" target="_blank">Manage Subscription</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <!-- EZEK A LINKEK AZ ÚJ ALOLDALAKRA MUTATNAK -->
+                    <a href="privacy.html" target="_blank">Privacy Policy</a>
+                    <a href="terms.html" target="_blank">Terms of Service</a>
+                    <a href="refund.html" target="_blank">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2024 Millioner Strategy. All Rights Reserved.</p>
+                <p><b>Risk Disclaimer:</b> Trading involves significant risk and is not for every investor. Past results do not guarantee future performance. The tools and information provided are for educational purposes only and should not be considered financial advice. For full details, please read our complete <a href="terms.html" target="_blank">Terms of Service</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
