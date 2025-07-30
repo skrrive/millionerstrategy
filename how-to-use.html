@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Millioner Strategy PRO Suite</title>
+    <style>
+        /* --- UGYANAZOK AZ ÁLTALÁNOS STÍLUSOK, MINT A FŐOLDALON --- */
+        :root {
+            --primary-color: #00aaff; /* Élénk kék a gombokhoz és kiemelésekhez */
+            --background-color: #0d1117; /* Sötét háttér */
+            --card-color: #161b22; /* Kártyák háttérszíne */
+            --text-color: #c9d1d9; /* Általános szövegszín */
+            --heading-color: #ffffff; /* Címsorok színe */
+            --green-color: #28a745;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8; /* A jobb olvashatóságért növeltem a sorközt */
+        }
+        .container {
+            max-width: 900px; /* Szélesebb konténer a szövegnek */
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2, h3, h4 {
+            color: var(--heading-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 3rem; text-align: center; }
+        h2 { font-size: 2.2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; }
+        h3 { font-size: 1.6rem; }
+        h4 { font-size: 1.2rem; color: var(--primary-color); }
+        p, li { font-size: 1.1rem; }
+        ul { list-style-type: square; padding-left: 20px; }
+        code {
+            background-color: var(--card-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .home-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+            margin-top: 40px;
+        }
+        .home-button:hover {
+            transform: translateY(-2px);
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>User Guide</h1>
+        <p class="text-center">Mastering the Millioner Strategy PRO Suite</p>
+
+        <p>Welcome to the Millioner Strategy PRO community! You haven't just purchased indicators; you've acquired a complete, professional-grade trading system. This guide will help you understand the role of each tool and the powerful customization options available, enabling you to achieve peak performance in any market.</p>
+        
+        <p>Your PRO package consists of three synergistic tools designed to work together:</p>
+        <ul>
+            <li><strong>Millioner Strategy v7.6 PRO (The System Engine):</strong> Your primary, adaptive signal generator.</li>
+            <li><strong>Quantum Scalper v1.7 PRO (The Precision Tool):</strong> A high-precision instrument for sharp entries and active trade management.</li>
+            <li><strong>Support & Resistance Zones v1.3 (The Market Architect):</strong> Your automated market map.</li>
+        </ul>
+
+        <!-- SZEKCIÓ 1: MILLIONER STRATEGY -->
+        <section id="millioner-strategy">
+            <h2>1. Millioner Strategy v7.6 PRO – The System Engine</h2>
+            <p>This is your core indicator, responsible for identifying the primary trend and generating entry signals. Its heart is an intelligent, adaptive engine that adjusts to market volatility.</p>
+            
+            <h3>How It Works</h3>
+            <p>When the market is moving decisively and trending, the engine becomes more sensitive to provide timely signals. When the market is choppy and moving sideways, the engine slows down to filter out market noise and protect you from bad entries.</p>
+
+            <h3>Key Settings & Customization</h3>
+            
+            <h4>Strategy Engine</h4>
+            <ul>
+                <li><code>Adaptive (KAMA)</code>: The recommended, intelligent mode. It automatically adapts to the current market character.</li>
+                <li><code>Classic (EMA)</code>: A traditional engine based on Exponential Moving Averages. It's more predictable but less "smart" than the adaptive engine.</li>
+            </ul>
+
+            <h4>Risk Management</h4>
+            <ul>
+                <li><code>TP1/TP2/TP3 Multiplier</code>: Define your Take Profit levels as a multiple of the entry price. (e.g., a TP2 multiplier of 1.02 sets the target at a 2% price move from your entry).</li>
+                <li><code>Use ATR for Stop-Loss?</code>: This is one of the most powerful features. When enabled, the Stop-Loss is calculated based on the market's current volatility (Average True Range). This results in a wider SL in volatile markets and a tighter SL in calm markets, which is crucial for smart risk management.</li>
+                <li><code>Fixed SL Multiplier</code>: If the ATR-based SL is disabled, this fixed multiplier will determine your Stop-Loss level.</li>
+            </ul>
+
+            <h4>Core Signal Filters</h4>
+            <ul>
+                <li><code>Use Multi-Timeframe (MTF) Confirmation?</code>: HIGHLY RECOMMENDED. This filter only permits a trade if the trend on a higher timeframe (e.g., 1-hour) agrees with your signal. It's the best way to avoid trading against the dominant market flow.</li>
+                <li><code>Use RSI Momentum Filter?</code>: Allows a trade only if the momentum, measured by the RSI, confirms your signal's direction (RSI > 50 for a BUY, < 50 for a SELL).</li>
+            </ul>
+        </section>
+
+        <!-- SZEKCIÓ 2: QUANTUM SCALPER -->
+        <section id="quantum-scalper">
+            <h2>2. Quantum Scalper v1.7 PRO – The Precision Tool</h2>
+            <p>This indicator is a specialist for short-term, high-frequency trading. Its purpose is to find precision entries during minor pullbacks or corrections within the main trend.</p>
+
+            <h3>How It Works</h3>
+            <p>The system uses a two-step logic: a SuperTrend indicator defines the main trading direction (long-only or short-only), and a Stochastic RSI then hunts for overbought/oversold entry points within that established trend.</p>
+
+            <h3>Key Settings & Customization</h3>
+            
+            <h4>Entry Signal: Stochastic RSI</h4>
+            <ul>
+                <li><code>Entry Type (Conservative / Aggressive / Both)</code>: This is the most important setting!
+                    <ul>
+                        <li><code>Conservative</code>: Signals are generated only from the classic overbought/oversold zones (80/20). Fewer signals, but higher probability.</li>
+                        <li><code>Aggressive</code>: Generates a signal as soon as the Stochastic RSI crosses the 50-midline, providing earlier entries. More signals, but with higher risk.</li>
+                        <li><code>Both</code>: Enables both signal types.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Fakeout Filter: EMA Convergence</h4>
+            <p>A brilliant filter that prevents entries when the market is indecisive and moving averages are tangled together. It only allows a trade when the fast and slow EMAs have sufficient separation, indicating clear momentum.</p>
+        </section>
+        
+        <!-- SZEKCIÓ 3: S&R ZONES -->
+        <section id="sr-zones">
+            <h2>3. Support & Resistance Zones – The Market Architect</h2>
+            <p>This utility takes one of the most difficult parts of technical analysis off your shoulders: identifying key market levels.</p>
+            
+            <h3>How It Works</h3>
+            <p>The indicator automatically analyzes historical price action and draws the purple (resistance) and blue (support) zones where the price has likely reacted in the past. It provides you with an instant, objective map of the market structure.</p>
+        </section>
+
+        <!-- SZEKCIÓ 4: BEST PRACTICES -->
+        <section id="best-practices">
+            <h2>General Strategy & Best Practices</h2>
+            <ol>
+                <li><strong>Start Simple:</strong> Don't enable all filters at once. Begin with the default settings and observe how the indicators behave on your favorite market and timeframe.</li>
+                <li><strong>Backtest, Backtest, Backtest!</strong> Before risking real capital, spend hours using TradingView's "Replay" mode. Test different settings and keep a journal of which configurations work best.</li>
+                <li><strong>One Change at a Time:</strong> When fine-tuning, only adjust one parameter at a time and observe its effect. If you change multiple settings simultaneously, you'll never know which one was responsible for the change in performance.</li>
+                <li><strong>There Is No Holy Grail:</strong> The goal is not to find a setting that never loses. The goal is to find a configuration that is profitable over the long term and fits your personal trading style and risk tolerance. Accept losses as a part of the game.</li>
+                <li><strong>Save Your Templates:</strong> Once you find a great setup for a specific asset (e.g., "BTC 15m Scalpel" or "EURUSD 4h Swing"), save it as an indicator template in TradingView for one-click access later.</li>
+            </ol>
+        </section>
+
+        <div class="text-center">
+            <a href="index.html" class="home-button">← Back to Home Page</a>
+        </div>
+    </div>
+
+</body>
+</html>
