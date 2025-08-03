@@ -36,19 +36,16 @@
         .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2); }
 
         /* --- FEJLÉC (HERO SECTION) - JAVÍTOTT, EGYSZERŰSÍTETT STÍLUS --- */
-        #hero {
+             #hero {
             padding-top: 100px;
             padding-bottom: 100px;
         }
-        #hero img {
-            max-width: 100%;
-            border-radius: 12px;
-            margin-top: 50px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-        }
-        #hero a:hover img {
-            transform: scale(1.02);
+        /* Új stílus a fix logóhoz */
+        #hero-logo {
+            max-width: 550px; /* A logó maximális szélessége a képernyőn */
+            width: 100%; /* Reszponzív viselkedés */
+            height: auto; /* Az arányok megtartása */
+            margin-top: 40px; /* Térköz a szöveg és a logó között */
         }
         
         /* --- STICKY NAVIGÁCIÓS MENÜ STÍLUS --- */
@@ -120,12 +117,7 @@
             <h1>The Only Complete Trading System You Will Ever Need.</h1>
             <p>Stop chasing holy grails. Our PRO Pack gives you three specialized, data-proven indicators for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
             
-            <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/1753123946054.jpg"
-               data-pswp-width="1554"
-               data-pswp-height="868"
-               target="_blank">
-                <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/1753123946054.jpg" alt="Millioner Strategy Quantastra">
-            </a>
+         <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/Untitled%20design.png" alt="Millioner Strategy Quantastra Edition Logo" id="hero-logo">
         </div>
     </section>
 
@@ -349,6 +341,7 @@
 </body>
 
 </html>
+
 
 
 
