@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Millioner Strategy - Your Complete Trading Arsenal</title>
-    <!-- GLightbox CSS a felugró képgalériához -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+
     <style>
         /* --- ÁLTALÁNOS STÍLUSOK --- */
         :root {
@@ -34,33 +35,23 @@
         .cta-button { display: inline-block; background-color: var(--primary-color); color: white; padding: 15px 35px; font-size: 1.2rem; font-weight: bold; text-decoration: none; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; width: 100%; box-sizing: border-box; }
         .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2); }
 
- --- FEJLÉC (HERO SECTION) - NAGYOBB, KITÖLTŐ HÁTTÉRREL --- */
-#hero {
-    /* Megnöveljük a függőleges teret, hogy a logó kényelmesen elférjen */
-    padding-top: 100px; 
-    padding-bottom: 50px; /* A felesleges alsó teret csökkentjük */
-
-    /* A logó mint háttérkép beállítása */
-    background-image: url('https://i.ibb.co/Mymp2HDV/Original-Logo.jpg');
-    
-    /* === JAVÍTÁS 1: HÁTTÉRSZÍN === */
-    /* A háttérszínt a kép sötétkék színére állítjuk (#0A192F - ez egy Hex kód) */
-    background-color: #0A192F; 
-    
-    /* A háttérkép pozicionálása: pontosan középre */
-    background-position: center center; 
-    
-    /* A háttérkép nem ismétlődik */
-    background-repeat: no-repeat; 
-    
-    /* === JAVÍTÁS 2: HÁTTÉRMÉRET === */
-    /* A háttérkép kitölti a rendelkezésre álló teret anélkül, hogy torzulna.
-       A 'contain' biztosítja, hogy a kép teljes egésze látható legyen. */
-    background-size: contain; 
-}
-}
+        /* --- FEJLÉC (HERO SECTION) - JAVÍTOTT, EGYSZERŰSÍTETT STÍLUS --- */
+        #hero {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        #hero img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 50px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        #hero a:hover img {
+            transform: scale(1.02);
+        }
         
-        /* --- ÚJ, STICKY NAVIGÁCIÓS MENÜ STÍLUS --- */
+        /* --- STICKY NAVIGÁCIÓS MENÜ STÍLUS --- */
         .main-nav { background-color: rgba(22, 27, 34, 0.85); backdrop-filter: blur(10px); padding: 15px 0; border-bottom: 1px solid #30363d; position: sticky; top: 0; z-index: 1000; width: 100%; }
         .nav-container { display: flex; justify-content: center; align-items: center; gap: 40px; }
         .nav-link { color: var(--text-color); text-decoration: none; font-size: 1.1rem; font-weight: 500; padding: 5px 15px; border-radius: 6px; transition: color 0.2s ease, background-color 0.2s ease; }
@@ -76,16 +67,12 @@
         .proof-item p { margin: 0; font-size: 0.9rem; opacity: 0.7; }
         .win-rate { color: var(--green-color); font-weight: bold; }
 
-        /* --- TERMÉKEK (FRISSÍTETT STÍLUSSAL) --- */
+        /* --- TERMÉKEK --- */
         .two-column-section { display: flex; flex-direction: row; gap: 50px; align-items: center; text-align: left; margin-top: 80px; }
-        /* A kép konténere (az 'a' tag) mostantól rugalmasan nagyobb részt foglal el */
-        .two-column-section .image-container { flex: 1.2; /* Kicsit nagyobb helyet kap, mint a szöveg */ }
-        .two-column-section img { width: 100%; /* Kitölti a konténerét */ border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .text-content { flex: 1; } /* A szöveg konténere */
-        
-        /* KATTINTHATÓ KÉPEK STÍLUSA */
-        a.glightbox img { cursor: zoom-in; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        a.glightbox img:hover { transform: scale(1.03); box-shadow: 0 15px 35px rgba(0, 170, 255, 0.15); }
+        .product-image-link { flex: 1.2; display: block; cursor: zoom-in; }
+        .product-image-link img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease; }
+        .product-image-link:hover img { transform: scale(1.03); }
+        .text-content { flex: 1; }
         
         #gallery { background-color: var(--card-color); }
         .referral-grid { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
@@ -131,7 +118,14 @@
     <section id="hero">
         <div class="container">
             <h1>The Only Complete Trading System You Will Ever Need.</h1>
-            <p>Stop chasing holy grails. Our PRO Pack gives you **three specialized, data-proven indicators** for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
+            <p>Stop chasing holy grails. Our PRO Pack gives you three specialized, data-proven indicators for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
+            
+            <a href="[A NAGY FELBONTÁSÚ HERO KÉP LINKJE IDE]"
+               data-pswp-width="[A KÉP EREDETI SZÉLESSÉGE]"
+               data-pswp-height="[A KÉP EREDETI MAGASSÁGA]"
+               target="_blank">
+                <img src="[A KIS BÉLYEGKÉP LINKJE IDE]" alt="Millioner Strategy Arsenal in Action">
+            </a>
         </div>
     </section>
 
@@ -155,13 +149,17 @@
     </section>
 
     <section id="products">
-        <div class="container">
+        <div class="container pswp-gallery" id="product-gallery">
             <h2>Your Complete Trading Arsenal</h2>
             <p>You don't get one indicator. You get three specialized weapons, each designed for a specific trading style.</p>
 
             <div class="two-column-section">
-                <a href="https://i.ibb.co/k62nnzj1/image-7.png" class="glightbox image-container" data-gallery="product-gallery">
-                    <img src="https://i.ibb.co/k62nnzj1/image-7.png" alt="Millioner Strategy Indicator">
+                <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/sol%20100%20trend.png"
+                   class="product-image-link"
+                   data-pswp-width="2560"
+                   data-pswp-height="1440"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/sol%20100%20trend.png" alt="Millioner Strategy Indicator">
                 </a>
                 <div class="text-content">
                     <h3>Millioner Strategy v7.6 PRO</h3><h4>(Adaptive Engine)</h4>
@@ -174,14 +172,22 @@
                     <h3>Quantum Scalper v1.7 PRO</h3>
                     <p>Your weapon for high-frequency scalping on lower timeframes (M1-M15). The multi-stage confirmation engine filters market noise to deliver precise pullback entries. **This is your tool for capturing quick, consistent profits throughout the day.** Best used on the 5-minute chart for optimal performance.</p>
                 </div>
-                <a href="https://i.ibb.co/gF4KH8Z6/image-11.png" class="glightbox image-container" data-gallery="product-gallery">
-                    <img src="https://i.ibb.co/gF4KH8Z6/image-11.png" alt="Quantum Scalper Indicator">
+                <a href="[A NAGY QUANTUM SCALPER KÉP LINKJE IDE]"
+                   class="product-image-link"
+                   data-pswp-width="[A KÉP EREDETI SZÉLESSÉGE]"
+                   data-pswp-height="[A KÉP EREDETI MAGASSÁGA]"
+                   target="_blank">
+                    <img src="[A KIS BÉLYEGKÉP LINKJE IDE]" alt="Quantum Scalper Indicator">
                 </a>
             </div>
 
             <div class="two-column-section">
-                <a href="https://i.ibb.co/Hpn9KvqV/Generated-Image-July-30-2025-12-24-AM.png" class="glightbox image-container" data-gallery="product-gallery">
-                    <img src="https://i.ibb.co/Hpn9KvqV/Generated-Image-July-30-2025-12-24-AM.png" alt="Support & Resistance Zones Indicator">
+                <a href="[A NAGY S&R ZONES KÉP LINKJE IDE]"
+                   class="product-image-link"
+                   data-pswp-width="[A KÉP EREDETI SZÉLESSÉGE]"
+                   data-pswp-height="[A KÉP EREDETI MAGASSÁGA]"
+                   target="_blank">
+                    <img src="[A KIS BÉLYEGKÉP LINKJE IDE]" alt="Support & Resistance Zones Indicator">
                 </a>
                 <div class="text-content">
                     <h3>Support & Resistance Zones v1.3</h3>
@@ -198,6 +204,8 @@
             <a href="gallery.html" class="cta-button" target="_blank" style="max-width: 400px;">View the Full Gallery</a>
         </div>
     </section>
+
+    <!-- ... A KÓD TÖBBI RÉSZE VÁLTOZATLAN ... -->
 
     <section id="exchanges">
         <div class="container">
@@ -326,16 +334,20 @@
         </div>
     </footer>
 
-    <!-- GLightbox JS a felugró képgalériához -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script type="text/javascript">
-        const lightbox = GLightbox({
-            touchNavigation: true,
-            loop: false,
-            closeEffect: 'fade'
+    <!-- PhotoSwipe JS -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+
+        // Galéria a Főoldalon
+        const mainPageGallery = new PhotoSwipeLightbox({
+          gallery: '#hero .container, #product-gallery',
+          children: 'a',
+          pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
         });
+        mainPageGallery.init();
     </script>
 </body>
 
 </html>
+
 
