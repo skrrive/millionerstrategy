@@ -99,39 +99,49 @@
         .footer-column a:hover { color: var(--primary-color); }
         .footer-bottom { border-top: 1px solid #30363d; padding-top: 20px; text-align: center; font-size: 0.8rem; }
         .footer-bottom p { max-width: 100%; font-size: 0.8rem; margin: 5px auto; }
-/* --- VÁSÁRLÓ SZÁMLÁLÓ STÍLUSA (ANIMÁLT VERZIÓ) --- */
+
+        /* --- VÁSÁRLÓ SZÁMLÁLÓ STÍLUSA (SÜRGETŐ VERZIÓ) --- */
 .customer-counter {
-    background-color: rgba(40, 167, 69, 0.1); /* Enyhe ZÖLD háttér */
+    background-color: rgba(40, 167, 69, 0.1);
     border: 1px solid var(--green-color);
     border-radius: 12px;
-    padding: 20px 30px;
+    padding: 25px 30px;
     max-width: 700px;
     margin: 40px auto 50px auto;
-    /* Az animáció hozzáadása a dobozhoz */
-    animation: pulse-green 2s infinite; 
+    animation: pulse-green 2s infinite;
+    text-align: center; /* Középre igazítjuk a szöveget */
 }
 
-.customer-counter h3 {
-    margin: 0;
+/* Az első, fő sor stílusa */
+.counter-line-1 {
     font-size: 1.5rem;
+    font-weight: 500;
     color: var(--heading-color);
+    margin-bottom: 10px; /* Térköz a két sor között */
+}
+
+/* A második, sürgető sor stílusa */
+.counter-line-2 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
 #customer-count {
-    color: var(--green-color); /* A szám zöld színe */
+    color: var(--green-color);
     font-weight: bold;
-    font-size: 1.8rem; /* A számot kicsit nagyobbra vesszük */
-    vertical-align: middle; /* Igazítás a szöveg közepéhez */
+    font-size: 1.8rem;
+    vertical-align: middle;
 }
 
-/* Az animáció kulcskockáinak (keyframes) definiálása */
+/* Az animáció változatlan marad */
 @keyframes pulse-green {
     0% {
         transform: scale(1);
         box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
     }
     70% {
-        transform: scale(1.01); /* Finom nagyítás */
+        transform: scale(1.01);
         box-shadow: 0 0 10px 20px rgba(40, 167, 69, 0);
     }
     100% {
@@ -264,9 +274,16 @@
         <div class="container">
             <h2>Get Your Complete Trading Arsenal</h2>
             <p>Choose the plan that fits your trading journey. All plans include full access to all three indicator versions and all future updates.</p>              
-          <div class="customer-counter">
-    <h3>Join <span id="customer-count">173</span> Happy Traders Already Using the System!</h3>
+   <!-- === VÁSÁRLÓ SZÁMLÁLÓ KEZDETE (FRISSÍTETT, SÜRGETŐ VERZIÓ) === -->
+<div class="customer-counter">
+    <div class="counter-line-1">
+        🔥 Join <span id="customer-count">173</span> Traders Who Already Secured Their Edge!
+    </div>
+    <div class="counter-line-2">
+        Hurry, the 50% discount is for the first 300 members only!
+    </div>
 </div>
+<!-- === VÁSÁRLÓ SZÁMLÁLÓ VÉGE === -->
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Monthly</h3>
@@ -384,6 +401,7 @@
 </body>
 
 </html>
+
 
 
 
