@@ -99,6 +99,46 @@
         .footer-column a:hover { color: var(--primary-color); }
         .footer-bottom { border-top: 1px solid #30363d; padding-top: 20px; text-align: center; font-size: 0.8rem; }
         .footer-bottom p { max-width: 100%; font-size: 0.8rem; margin: 5px auto; }
+/* --- VÁSÁRLÓ SZÁMLÁLÓ STÍLUSA (ANIMÁLT VERZIÓ) --- */
+.customer-counter {
+    background-color: rgba(40, 167, 69, 0.1); /* Enyhe ZÖLD háttér */
+    border: 1px solid var(--green-color);
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 700px;
+    margin: 40px auto 50px auto;
+    /* Az animáció hozzáadása a dobozhoz */
+    animation: pulse-green 2s infinite; 
+}
+
+.customer-counter h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+
+#customer-count {
+    color: var(--green-color); /* A szám zöld színe */
+    font-weight: bold;
+    font-size: 1.8rem; /* A számot kicsit nagyobbra vesszük */
+    vertical-align: middle; /* Igazítás a szöveg közepéhez */
+}
+
+/* Az animáció kulcskockáinak (keyframes) definiálása */
+@keyframes pulse-green {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        transform: scale(1.01); /* Finom nagyítás */
+        box-shadow: 0 0 10px 20px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
         
         @media (max-width: 992px) { .pricing-card.highlight { transform: scale(1); } }
         @media (max-width: 768px) {
@@ -344,6 +384,7 @@
 </body>
 
 </html>
+
 
 
 
