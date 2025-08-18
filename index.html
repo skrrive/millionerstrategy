@@ -101,54 +101,54 @@
         .footer-bottom p { max-width: 100%; font-size: 0.8rem; margin: 5px auto; }
 
         /* --- VÁSÁRLÓ SZÁMLÁLÓ STÍLUSA (SÜRGETŐ VERZIÓ) --- */
-.customer-counter {
-    background-color: rgba(40, 167, 69, 0.1);
-    border: 1px solid var(--green-color);
-    border-radius: 12px;
-    padding: 25px 30px;
-    max-width: 700px;
-    margin: 40px auto 50px auto;
-    animation: pulse-green 2s infinite;
-    text-align: center; /* Középre igazítjuk a szöveget */
-}
+        .customer-counter {
+            background-color: rgba(40, 167, 69, 0.1);
+            border: 1px solid var(--green-color);
+            border-radius: 12px;
+            padding: 25px 30px;
+            max-width: 700px;
+            margin: 40px auto 50px auto;
+            animation: pulse-green 2s infinite;
+            text-align: center; /* Középre igazítjuk a szöveget */
+        }
 
-/* Az első, fő sor stílusa */
-.counter-line-1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--heading-color);
-    margin-bottom: 10px; /* Térköz a két sor között */
-}
+        /* Az első, fő sor stílusa */
+        .counter-line-1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--heading-color);
+            margin-bottom: 10px; /* Térköz a két sor között */
+        }
 
-/* A második, sürgető sor stílusa */
-.counter-line-2 {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    font-weight: bold;
-}
+        /* A második, sürgető sor stílusa */
+        .counter-line-2 {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            font-weight: bold;
+        }
 
-#customer-count {
-    color: var(--green-color);
-    font-weight: bold;
-    font-size: 1.8rem;
-    vertical-align: middle;
-}
+        #customer-count {
+            color: var(--green-color);
+            font-weight: bold;
+            font-size: 1.8rem;
+            vertical-align: middle;
+        }
 
-/* Az animáció változatlan marad */
-@keyframes pulse-green {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
-    }
-    70% {
-        transform: scale(1.01);
-        box-shadow: 0 0 10px 20px rgba(40, 167, 69, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
-    }
-}
+        /* Az animáció változatlan marad */
+        @keyframes pulse-green {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                transform: scale(1.01);
+                box-shadow: 0 0 10px 20px rgba(40, 167, 69, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
         
         @media (max-width: 992px) { .pricing-card.highlight { transform: scale(1); } }
         @media (max-width: 768px) {
@@ -164,10 +164,11 @@
 
     <section id="hero">
         <div class="container">
+            <!-- === FRISSÍTETT SZÖVEG === -->
             <h1>The Only Complete Trading System You Will Ever Need.</h1>
-            <p>Stop chasing holy grails. Our PRO Pack gives you three specialized, data-proven indicators for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
+            <p>Stop chasing holy grails. Our PRO Pack gives you four specialized, data-proven indicators for complete market dominance, from long-term swing trading to high-frequency scalping. This is your final trading arsenal.</p>
             
-         <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/Untitled%20design.png" alt="Millioner Strategy Quantastra Edition Logo" id="hero-logo">
+            <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/Untitled%20design.png" alt="Millioner Strategy Quantastra Edition Logo" id="hero-logo">
         </div>
     </section>
 
@@ -192,8 +193,9 @@
 
     <section id="products">
         <div class="container pswp-gallery" id="product-gallery">
+            <!-- === FRISSÍTETT SZÖVEG === -->
             <h2>Your Complete Trading Arsenal</h2>
-            <p>You don't get one indicator. You get three specialized weapons, each designed for a specific trading style.</p>
+            <p>You don't get one indicator. You get four specialized weapons, each designed for a specific trading style.</p>
 
             <div class="two-column-section">
                 <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(4).png"
@@ -208,22 +210,43 @@
                     <p>Our flagship indicator for swing and day trading. The AI-like Adaptive (KAMA) Engine automatically adjusts to market volatility, delivering an incredible 80-100% win rate on higher timeframes. **This is your tool for relaxed, high-probability trend trading.**</p>
                 </div>
             </div>
-
+            
+            <!-- === ÚJ INDIKÁTOR SZEKCIÓ KEZDETE === -->
             <div class="two-column-section reverse-on-mobile">
                 <div class="text-content">
-                    <h3>Quantum Scalper v1.7 PRO</h3>
-                    <p>Your weapon for high-frequency scalping on lower timeframes (M1-M15). The multi-stage confirmation engine filters market noise to deliver precise pullback entries. **This is your tool for capturing quick, consistent profits throughout the day.** Best used on the 5-minute chart for optimal performance.</p>
+                    <h3>Velocity Scalper RSI (VSR)</h3><h4>(Predictive Momentum Engine)</h4>
+                    <p>Engineered for pure, high-frequency momentum scalping. The VSR doesn't just show you when momentum shifts—it alerts you *before* it happens with its predictive crossover technology. Perfect for 1-minute to 5-minute charts. **This is your ultimate weapon for micro-trend dominance.**</p>
                 </div>
-                <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(11).png"
+                <!-- FIGYELEM: EZ EGY IDEIGLENES KÉP! CSERÉLD KI EGY VALÓDI KÉPERNYŐKÉPRE AZ ÚJ INDIKÁTORRÓL! -->
+                <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(5).png" 
+                   class="product-image-link"
+                   data-pswp-width="1554" 
+                   data-pswp-height="868"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(5).png" alt="Velocity Scalper RSI Indicator">
+                </a>
+            </div>
+            <!-- === ÚJ INDIKÁTOR SZEKCIÓ VÉGE === -->
+
+            <div class="two-column-section">
+                 <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(11).png"
                    class="product-image-link"
                    data-pswp-width="1554"
                    data-pswp-height="868"
                    target="_blank">
                     <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/image%20(11).png" alt="Quantum Scalper Indicator">
                 </a>
+                <div class="text-content">
+                    <h3>Quantum Scalper v1.7 PRO</h3>
+                    <p>Your weapon for high-frequency scalping on lower timeframes (M1-M15). The multi-stage confirmation engine filters market noise to deliver precise pullback entries. **This is your tool for capturing quick, consistent profits throughout the day.** Best used on the 5-minute chart for optimal performance.</p>
+                </div>
             </div>
 
-            <div class="two-column-section">
+            <div class="two-column-section reverse-on-mobile">
+                <div class="text-content">
+                    <h3>Support & Resistance Zones v1.3</h3>
+                    <p>The foundation of any professional analysis. This tool automatically identifies and plots the most critical support and resistance zones on your chart. It validates the signals from our other indicators, giving you an extra layer of confidence. **This is your map of the market.**</p>
+                </div>
                 <a href="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/Generated%20Image%20July%2030%2C%202025%20-%2012_24AM.png"
                    class="product-image-link"
                    data-pswp-width="1554"
@@ -231,10 +254,6 @@
                    target="_blank">
                     <img src="https://raw.githubusercontent.com/skrrive/millionerstrategy/main/gallery-images/Generated%20Image%20July%2030%2C%202025%20-%2012_24AM.png" alt="Support & Resistance Zones Indicator">
                 </a>
-                <div class="text-content">
-                    <h3>Support & Resistance Zones v1.3</h3>
-                    <p>The foundation of any professional analysis. This tool automatically identifies and plots the most critical support and resistance zones on your chart. It validates the signals from our other indicators, giving you an extra layer of confidence. **This is your map of the market.**</p>
-                </div>
             </div>
         </div>
     </section>
@@ -246,8 +265,6 @@
             <a href="gallery.html" class="cta-button" target="_blank" style="max-width: 400px;">View the Full Gallery</a>
         </div>
     </section>
-
-    <!-- ... A KÓD TÖBBI RÉSZE VÁLTOZATLAN ... -->
 
     <section id="exchanges">
         <div class="container">
@@ -273,17 +290,15 @@
     <section id="pricing" style="background-color: var(--card-color);">
         <div class="container">
             <h2>Get Your Complete Trading Arsenal</h2>
-            <p>Choose the plan that fits your trading journey. All plans include full access to all three indicator versions and all future updates.</p>              
-   <!-- === VÁSÁRLÓ SZÁMLÁLÓ KEZDETE (FRISSÍTETT, SÜRGETŐ VERZIÓ) === -->
-<div class="customer-counter">
-    <div class="counter-line-1">
-        🔥 Join <span id="customer-count">189</span> Traders Who Already Secured Their Edge!
-    </div>
-    <div class="counter-line-2">
-        Hurry, the 50% discount is for the first 300 members only!
-    </div>
-</div>
-<!-- === VÁSÁRLÓ SZÁMLÁLÓ VÉGE === -->
+            <p>Choose the plan that fits your trading journey. All plans include full access to all four indicator versions and all future updates.</p>              
+            <div class="customer-counter">
+                <div class="counter-line-1">
+                    🔥 Join <span id="customer-count">189</span> Traders Who Already Secured Their Edge!
+                </div>
+                <div class="counter-line-2">
+                    Hurry, the 50% discount is for the first 300 members only!
+                </div>
+            </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Monthly</h3>
@@ -292,7 +307,9 @@
                     <div class="promo-text">Pay this price with PayPal!</div>
                     <div class="promo-text">For the first 300 members!</div>
                     <ul>
+                        <!-- === FRISSÍTETT LISTA === -->
                         <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Velocity Scalper RSI (VSR)</li>
                         <li>Quantum Scalper v1.7 PRO</li>
                         <li>S&R Zones v1.3</li>
                         <li>All Future Updates</li>
@@ -306,7 +323,9 @@
                     <div class="promo-text">Pay this price with Crypto or PayPal!</div>
                     <div class="promo-text">For the first 300 members!</div>
                     <ul>
+                        <!-- === FRISSÍTETT LISTA === -->
                         <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Velocity Scalper RSI (VSR)</li>
                         <li>Quantum Scalper v1.7 PRO</li>
                         <li>S&R Zones v1.3</li>
                         <li>All Future Updates</li>
@@ -320,7 +339,9 @@
                     <div class="promo-text">Pay this price with PayPal!</div>
                     <div class="promo-text">Best Value!</div>
                     <ul>
+                        <!-- === FRISSÍTETT LISTA === -->
                         <li>Millioner Strategy v7.6 (Adaptive)</li>
+                        <li>Velocity Scalper RSI (VSR)</li>
                         <li>Quantum Scalper v1.7 PRO</li>
                         <li>S&R Zones v1.3</li>
                         <li>All Future Updates</li>
@@ -338,8 +359,9 @@
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
+                <!-- === FRISSÍTETT SZÖVEG === -->
                 <h3>What do I get when I purchase?</h3>
-                <p>You get instant access to our complete PRO Pack, which includes three powerful, distinct indicators for TradingView: the Millioner Strategy, the Quantum Scalper, and the Support & Resistance Zones indicator. You also get all future updates for free.</p>
+                <p>You get instant access to our complete PRO Pack, which includes four powerful, distinct indicators for TradingView: the Millioner Strategy, the Velocity Scalper RSI (VSR), the Quantum Scalper, and the Support & Resistance Zones indicator. You also get all future updates for free.</p>
             </div>
             <div class="faq-item">
                 <h3>What markets does this work on?</h3>
@@ -401,19 +423,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
